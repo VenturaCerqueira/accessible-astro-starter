@@ -10,9 +10,87 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
 
 <DefaultLayout title="Home">
   <Hero />
+    <section class="my-1">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div class="flex flex-col items-start gap-4">
+        <h2 class="text-6xl">Quem é Anderson ?</h2>
+        <h5 class="text-6-1">Desenvolvedor Back-end </h5>
+
+        <p class="text-2xl">
+        Olá, sou Anderson Ventura Cerqueira Batista.<br>
+        - Atualmente sou estudante de Engenharia de Software na UCSal(Universidade Cátolica do Salvador);<br> - Formado em analise e desenvolvimento de sistemas, apaixonado por tecnologia e criação de soluções incríveis;<br> Minha vibe é full-stack, mas meu coração bate forte por:
+        <br>
+        - Back-end: Node.js e Python na veia! (Buscando conhecimento em Go); <br>
+        - Banco de Dados: Domínio de SQL com Firebird e MySQL. 
+        </p>
+      </div>
+      <div class="space-content">
+        <Accordion>
+          <AccordionItem name="exclusive" title="Formação Academica:" open>
+            <p>
+              - Engenharia de Software (04 anos) - Universidade Cátolica do Salvador; <br>
+              - Ínicio: 01/06/2025; <br>
+              - Em andamento...<br>
+              <br>
+              - Analise e Desenvolvimento de Software (03 anos) - Faculdade São Salvador; <br>
+              - Ínicio: 01/03/2017;<br>
+              - Termino: 22/06/2019. <br>
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="Meus cursos">
+            <p>
+              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
+              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
+              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
+              advanced UI controls more accessible.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="Minhas habilidades">
+            <p>
+              Keyboard navigation is essential for users who can't use a mouse, including people with motor
+              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
+              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
+              able to access all interactive elements and navigate through content efficiently.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="Meus certificados">
+            <p>
+              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
+              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
+              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
+              impairments or color blindness.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="Indiomas">
+            <p>
+              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
+              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
+              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
+              established design patterns from the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
+                >ARIA Authoring Practices Guide</a
+              >.
+            </p>
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <ContentMedia imgSrc="/GitHub.jpeg">
+    <h2>Quem é Anderson Ventura ?</h2>
+    <p class="text-2xl">
+      Olá, tudo bem? <br> Me chamo Anderson Ventura Cerqueira Batista, sou desenvolvedor back-end
+      <ExternalLink href="https://github.com/incluud/accessible-astro-components">separate package</ExternalLink
+      >. They'll get you up and running in building an accessible solution for your visitors.
+    </p>
+  </ContentMedia>
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <h2 class="mb-16 text-6xl">Minhas habilidades</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="lucide:accessibility" title="Accessible by default">
           Keyboard navigation, focus indicators, ARIA labels, semantic HTML, and more. This theme is designed to be
@@ -46,15 +124,6 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <ExternalLink href="https://github.com/incluud/accessible-astro-components"
-        >separate package</ExternalLink
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>WCAG 2.2 AA compliant</h2>
     <p class="text-2xl">
@@ -64,72 +133,13 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
     </p>
   </ContentMedia>
   <section class="my-64">
-    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
-      <div class="flex flex-col items-start gap-4">
-        <h2 class="text-6xl">FAQ</h2>
-        <p class="text-2xl">
-          This section demonstrates how to effectively use the Accordion component to organize and display frequently
-          asked questions in an accessible and user-friendly way.
-        </p>
-        <a class="button" href="/faq">Contact support team</a>
-      </div>
-      <div class="space-content">
-        <Accordion>
-          <AccordionItem name="exclusive" title="What is WCAG and why is it important?" open>
-            <p>
-              WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web
-              accessibility. Following WCAG ensures your website is usable by people with various disabilities,
-              including visual, auditory, physical, and cognitive impairments. It's important not just for
-              accessibility, but also for legal compliance, SEO, and reaching a wider audience.
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="What's the difference between ARIA labels and alt text?">
-            <p>
-              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
-              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
-              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
-              advanced UI controls more accessible.
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="Why is keyboard navigation important?">
-            <p>
-              Keyboard navigation is essential for users who can't use a mouse, including people with motor
-              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
-              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
-              able to access all interactive elements and navigate through content efficiently.
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
-            <p>
-              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
-              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
-              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
-              impairments or color blindness.
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="How do I make custom components accessible?">
-            <p>
-              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
-              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
-              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
-              established design patterns from the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
-                >ARIA Authoring Practices Guide</a
-              >.
-            </p>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    </div>
-  </section>
-  <section class="my-64">
     <div class="space-content container">
-      <h2 class="text-6xl">Our community</h2>
+      <h2 class="text-6xl">Minhas habilidades</h2>
       <p class="text-2xl">
-        We're a community of developers who are passionate about making the web more accessible. We're always looking
-        for new ways to improve the accessibility of the web.
+        Algumas das minhas habilidades (skill)
       </p>
       <AvatarGroup display="grid" gridItemsSize="300px" gridGap="2rem">
-        <Avatar initials="RJ" title="Robert Johnson" subtitle="Manager" />
+        <Avatar initials="PY" title="Robert Johnson" subtitle="Manager" />
         <Avatar initials="MT" title="Maria Torres" subtitle="Developer" />
         <Avatar initials="AK" title="Alex Kim" subtitle="Designer" />
         <Avatar initials="SL" title="Sarah Lee" subtitle="Content Strategist" />
